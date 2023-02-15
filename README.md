@@ -5,7 +5,7 @@ Did you miss the old **GoPro software** to sync videos?
 This tool is what you're searching for (if you're a sheel enjoyer)  
 
 ## Installation
-The tool can be downloaded directly from [PyPi](https://pypi.org/project/goldpirate/).
+The tool can be downloaded directly from [PyPi](https://pypi.org/project/gopro-sync/).
 ```bash
 pip install gopro-sync
 ```
