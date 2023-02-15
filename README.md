@@ -1,6 +1,6 @@
 # GoPro Synchronizer
 
-Tired of _GoPro Cloud_ not working?  
+Tired of *GoPro Cloud* not working?  
 Did you miss the old **GoPro software** to sync videos?  
 This tool is what you're searching for (if you're a sheel enjoyer)  
 
