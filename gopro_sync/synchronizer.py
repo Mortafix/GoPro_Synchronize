@@ -2,8 +2,8 @@ from os import getcwd, makedirs, path, remove, rename, scandir
 from re import search
 
 from colorifix.colorifix import ppaint
+from gopro_sync.utils.arguments import argparsing
 from tqdm import tqdm
-from utils.arguments import argparsing
 
 VIDEO_EXT = ".mp4"
 PHOTO_EXT = ".jpg"
@@ -23,7 +23,7 @@ def scan_files(folder, extensions):
 
 def files_size(files):
     b_size = sum(path.getsize(file) for file in files)
-    if (kb_size := b_size / 1024) < 1:
+    if (kb_size := b_size / 1000) < 1:
         return f"{b_size:.0f} B"
     if (mb_size := kb_size / 1000) < 1:
         return f"{kb_size:.0f} KB"
@@ -58,7 +58,7 @@ def save_files(files, folder, to=None):
 def main():
     # parse args
     args = argparsing()
-    in_folder = path.join(args.i or getcwd(), "DCIM", "100GOPRO")
+    in_folder = path.join(args.i or getcwd())
     out_folder = path.join(args.o or getcwd(), args.name)
     is_test = args.test
 
@@ -70,7 +70,7 @@ def main():
         )
     if not path.exists(in_folder):
         return ppaint(
-            "\n[#red]ERROR![/] GoPro SD Card video folder [@underline]"
+            "\n[#red]ERROR![/] GoPro videos folder [@underline]"
             f"{in_folder}[/] not found!"
         )
 

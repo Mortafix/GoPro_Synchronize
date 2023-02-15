@@ -41,6 +41,6 @@ def argparsing():
         "--version",
         help="script version",
         action="version",
-        version="gopro-sync v0.0.3",
+        version="gopro-sync v0.0.11",
     )
     return parser.parse_args()
